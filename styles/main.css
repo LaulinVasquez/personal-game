@@ -20,6 +20,14 @@ body {
     font-size: 40px;
     animation: fall linear forwards;
   }
+  .heart {
+    position: absolute;
+    top: -60px;
+    font-size: 42px;
+    cursor: pointer;
+    animation: fall linear forwards;
+    z-index: 5;
+  }
   
   @keyframes fall {
     to {

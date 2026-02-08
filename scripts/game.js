@@ -1,30 +1,43 @@
-
-
 const centerBalloon = document.getElementById("centerBalloon");
 
-centerBalloon.addEventListener("click", startGame);
+centerBalloon.addEventListener("click", spawnBurst);
 
-function startGame() {
-  spawnBalloons(100);
+function spawnBurst() {
+  spawnBalloons(25);
+  spawnHeart();
 }
 
 function spawnBalloons(count) {
   for (let i = 0; i < count; i++) {
-    createBalloon();
+    createFalling("🎈", "falling");
   }
 }
 
-function createBalloon() {
-  const balloon = document.createElement("div");
-  balloon.className = "falling";
-  balloon.innerHTML = "🎈";
+function spawnHeart() {
+  const heart = createFalling("❤️", "heart");
 
-  balloon.style.left = Math.random() * 100 + "vw";
-  balloon.style.animationDuration = (2 + Math.random() * 3) + "s";
+  heart.addEventListener("click", () => {
+    clearFalling();
+    console.log("Heart caught ❤️");
+  });
+}
 
-  document.body.appendChild(balloon);
+function createFalling(icon, className) {
+  const el = document.createElement("div");
+  el.className = className;
+  el.innerHTML = icon;
 
-  setTimeout(() => {
-    balloon.remove();
-  }, 4000);
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = (2.5 + Math.random()) + "s";
+
+  document.body.appendChild(el);
+
+  setTimeout(() => el.remove(), 4000);
+
+  return el;
+}
+
+function clearFalling() {
+  document.querySelectorAll(".falling, .heart")
+    .forEach(el => el.remove());
 }
