@@ -14,3 +14,16 @@ body {
     cursor: pointer;
   }
   
+  .falling {
+    position: absolute;
+    top: -60px;
+    font-size: 40px;
+    animation: fall linear forwards;
+  }
+  
+  @keyframes fall {
+    to {
+      top: 110vh;
+    }
+  }
+  
