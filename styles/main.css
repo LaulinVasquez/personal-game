@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  #centerBalloon {
+    font-size: 80px;
+    cursor: pointer;
+  }
+  
