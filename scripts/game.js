@@ -41,3 +41,20 @@ function clearFalling() {
   document.querySelectorAll(".falling, .heart")
     .forEach(el => el.remove());
 }
+
+function spawnHeart() {
+    const heart = createFalling("❤️", "heart");
+  
+    heart.addEventListener("click", () => {
+      clearFalling();
+      showValentineMessage();
+    });
+  }
+  
+  function showValentineMessage() {
+    document.getElementById("valentineOverlay")
+      .classList.add("show");
+  
+    centerBalloon.style.display = "none";
+  }
+  
