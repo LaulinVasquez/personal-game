@@ -59,4 +59,28 @@ body {
     text-align: center;
   }
   
+  /* buttons */
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  
+  button.yes {
+    background: #ff4d88;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  
+  button.yes:hover {
+    background: #ff2f70;
+    transform: scale(1.05);
+  }
   

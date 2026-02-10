@@ -58,3 +58,13 @@ function spawnHeart() {
     centerBalloon.style.display = "none";
   }
   
+//   button handler
+
+document.querySelectorAll(".yes").forEach(button => {
+    button.addEventListener("click", celebrate);
+  });
+  
+  function celebrate() {
+    document.querySelector(".card").innerHTML = "Yay!! 💖💖💖";
+  }
+  
