@@ -1,14 +1,16 @@
-import { spawnBalloons } from "./balloons.mjs";
+import { spawnBalloons, spawnBalloonGroup ,createBalloon} from "./balloons.mjs";
 import { spawnHeart } from "./heart.mjs";
 
   
   function init(){
     const centerBalloon = document.getElementById("centerBalloon");
+    const gameArea = document.querySelector(".game-area");
 
     centerBalloon.addEventListener("click", spawnBurst);
     
     function spawnBurst() {
-      spawnBalloons(27);
+    //   spawnBalloonGroup(gameArea, 12);
+      spawnBalloons(27)
       spawnHeart();
     }
     
@@ -21,7 +23,7 @@ import { spawnHeart } from "./heart.mjs";
       });
       
       function celebrate() {
-        document.querySelector(".card").innerHTML = "Yay!! 💖💖💖";
+        document.querySelector(".card").innerHTML = "SI!! 💖💖💖";
       }    
   }
 
