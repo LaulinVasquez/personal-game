@@ -1,0 +1,41 @@
+
+.falling {
+    position: absolute;
+    top: -60px;
+    font-size: 40px;
+    animation: fall linear forwards;
+  }
+  .heart {
+    position: absolute;
+    top: -60px;
+    font-size: 42px;
+    cursor: pointer;
+    animation: fall linear forwards;
+    z-index: 5;
+  }
+  
+
+
+  #valentineOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 230, 240, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  #valentineOverlay.show {
+    display: flex;
+  }
+  
+  .card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    font-size: 32px;
+    color: #ff0066;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+  }
