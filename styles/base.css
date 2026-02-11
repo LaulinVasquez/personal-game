@@ -5,18 +5,25 @@
   body {
     margin: 0;
     height: 100vh;
-    background: #ffe6f0;
+    background: linear-gradient(135deg, #ff9ecf, #ffc3e6, #ff0099);
+    animation: gradientShift 12s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     font-family: Arial, sans-serif;
+
   }
 
   @keyframes fall {
     to {
       top: 110vh;
     }
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
     /* buttons */
@@ -48,4 +55,3 @@
         font-size: 80px;
         cursor: pointer;
       }
-      

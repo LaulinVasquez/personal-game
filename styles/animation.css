@@ -13,29 +13,88 @@
     animation: fall linear forwards;
     z-index: 5;
   }
+  .falling,
+.heart {
+  position: absolute;
+  top: -60px;
+  font-size: clamp(28px, 5vw, 48px);
+  animation: fall linear forwards;
+}
   
 
 
-  #valentineOverlay {
+#valentineOverlay {
     position: fixed;
     inset: 0;
-    background: rgba(255, 230, 240, 0.95);
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 20;
-  }
   
+    /* Soft romantic tint */
+    background: rgba(255, 182, 220, 0.25);
+    backdrop-filter: blur(8px);
+  }
   #valentineOverlay.show {
     display: flex;
   }
   
   .card {
-    background: white;
-    padding: 40px 50px;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  
+    padding: 45px 60px;
+    border-radius: 28px;
+  
+    color: #ff2f70;
     font-size: 32px;
-    color: #ff0066;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
+  
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  
+    box-shadow:
+      0 20px 50px rgba(255, 105, 180, 0.25),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  .card p {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  #valentineOverlay.show .card {
+    animation: popIn 0.4s ease forwards;
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: pink;
+    border-radius: 50% 50% 45% 45%;
+  }
+
+  #centerBalloon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(60px, 10vw, 100px);
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+  }
+  
+  #centerBalloon:hover {
+    transform: translate(-50%, -50%) scale(1.1);
   }

@@ -31,8 +31,8 @@ export function createBalloon(container) {
   let y = -100;
 
   // ✨ Game feel values
-  const fallSpeed = Math.random() * 1.5 + 1.5; // 1.5 → 3
-  const driftX = Math.random() * 0.8 - 0.4;    // -0.4 → 0.4
+  const fallSpeed = Math.random() * 1.5 + 1.5; 
+  const driftX = Math.random() * 0.8 - 0.4;    
 
   function animate() {
     y += fallSpeed;

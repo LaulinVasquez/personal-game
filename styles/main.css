@@ -1,2 +1,46 @@
 @import "base.css";  
 @import "animation.css";  
+
+
+
+  
+/* ========================= */
+/* 📱 MOBILE RESPONSIVENESS */
+/* ========================= */
+
+@media (max-width: 390px) {
+
+    /* Center balloon bigger */
+    #centerBalloon {
+      font-size: 110px;
+    }
+  
+    /* Falling balloons + hearts bigger */
+    .falling {
+      font-size: 60px;
+    }
+  
+    .heart {
+      font-size: 65px;
+    }
+  
+    /* Overlay card text larger */
+    .card {
+      font-size: 26px;
+      padding: 35px;
+    }
+  
+    /* Buttons larger and easier to tap */
+    button.yes {
+      font-size: 22px;
+      padding: 16px 28px;
+    }
+  
+    .buttons {
+      gap: 25px;
+    }
+    .falling,
+    .heart {
+      animation-duration: 3.5s !important;
+    }
+  }
