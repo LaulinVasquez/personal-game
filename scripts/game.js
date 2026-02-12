@@ -23,7 +23,7 @@ import { spawnHeart } from "./heart.mjs";
       });
       
       function celebrate() {
-        document.querySelector(".card").innerHTML = "SI!! Te amo mi amorcito bello preciosa💖💖💖";
+        document.querySelector(".card").innerHTML = "SI!! Te amo mi amorcito bello preciosa, Feliz 10 meses mi vida :D💖💖💖";
       }    
   }
 
